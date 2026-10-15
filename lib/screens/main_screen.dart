@@ -16,10 +16,10 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = const [
-    Tab1Screen(),
-    Tab2Screen(),
     Tab3Screen(),
+    Tab1Screen(),
     Tab4Screen(),
+    Tab2Screen(),
   ];
 
   @override
@@ -33,26 +33,25 @@ class _MainScreenState extends State<MainScreen> {
         indicatorColor: AppTheme.primaryColor.withValues(alpha: 0.2),
         destinations: [
         NavigationDestination(
-          icon: const Icon(Icons.stadium_outlined),
-          selectedIcon: const Icon(Icons.stadium, color: AppTheme.primaryColor),
-          label: 'Matches',
-        ),
-        NavigationDestination(
           icon: const Icon(Icons.emoji_events_outlined),
           selectedIcon: const Icon(Icons.emoji_events, color: AppTheme.primaryColor),
           label: 'Leagues',
-        ),
-        NavigationDestination(
-          icon: const Icon(Icons.groups_outlined),
-          selectedIcon: const Icon(Icons.groups, color: AppTheme.primaryColor),
-          label: 'Lineups',
         ),
         NavigationDestination(
           icon: const Icon(Icons.star_outline),
           selectedIcon: const Icon(Icons.star, color: AppTheme.primaryColor),
           label: 'Watchlist',
         ),
-
+        NavigationDestination(
+          icon: const Icon(Icons.stadium_outlined),
+          selectedIcon: const Icon(Icons.stadium, color: AppTheme.primaryColor),
+          label: 'Matches',
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.groups_outlined),
+          selectedIcon: const Icon(Icons.groups, color: AppTheme.primaryColor),
+          label: 'Lineups',
+        ),
         ],
       ),
     );
